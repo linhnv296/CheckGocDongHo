@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+input gio
+<input id="gio" type="number" placeholder="Nhap gio < 12">
+
+
+input phut
+<input id="phut" type="number" placeholder="Nhap gio < 60">
+<input type="button" onclick="checkgocHP()" value="check goc gio phut">
+<script>
+
+    function checkgocHP(){
+        let gio = 30;
+        let phut = 0.5;
+        let phutphut = 6;
+
+        let inputnhaph = parseFloat(document.getElementById("gio").value);
+        let inputnhapphut = parseFloat(document.getElementById("phut").value);
+        if(inputnhaph <13 && inputnhapphut<60){
+            if (inputnhaph ===12){
+                inputnhaph = 0;
+            }
+            let goch = gio*inputnhaph + phut*inputnhapphut;
+            let gocphut = inputnhapphut*phutphut;
+            let kequa = Math.abs(gocphut-goch);
+            let ketquakhac = 360 - kequa;
+            console.log(goch);
+            console.log(gocphut);
+            alert("Goc cua h va phut la: goc: "+kequa+" hoac: "+ketquakhac);
+        }else {
+            alert("Nhap lai gio or phut");
+        }
+
+        // let inputnhaph =4; //nhap gio
+        // let inputnhapphut = 20;//nhap phut
+
+        // let goch = gio*inputnhaph + phut*inputnhapphut;
+        // let gocphut = inputnhapphut*phutphut;
+        // let kequa = Math.abs(gocphut-goch);
+        //
+        // console.log(goch);
+        // console.log(gocphut);
+        // console.log("Goc cua h va phut la: "+kequa);
+
+    }
+
+</script>
+</body>
+</html>
